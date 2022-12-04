@@ -179,7 +179,7 @@ class GameState():
         if self.whiteToMove: # white pawn moves
             if self.board[r-1][c] == '--': #1 square pawn advance
                 moves.append(Move((r, c), (r-1, c), self.board))
-                if r == 6 and self.board[r-1][c] == '--': #2 square pawn advance
+                if r == 6 and self.board[r-2][c] == '--': #2 square pawn advance
                     moves.append(Move((r, c), (r-2, c), self.board))
             if c-1 >= 0: #capture left
                 if self.board[r-1][c-1][0] =='b':
