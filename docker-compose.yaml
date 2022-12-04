@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  chess-engine:
+    container_name: chess-engine
+    build:
+      context: ./service
+    ports:
+      - "8020:3000"
+    restart: always
